@@ -1,0 +1,21 @@
+*{margin: 0;
+padding: 0;
+}
+.Header{
+    background-image: url('https://raw.githubusercontent.com/devSahinur/The-Sports-Leagues/master/src/img/banar.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 40vh;
+    position: relative;
+    opacity: 0.9;
+}
+.Header h1{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: bold;
+}
