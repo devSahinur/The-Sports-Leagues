@@ -1,10 +1,10 @@
 import React from 'react';
 import '../style/Header.css';
 
-const Header = () => {
+const Header = ({logo}) => {
     return (
         <div className='Header'>
-            <h1>The Sport Leagues</h1>
+            { logo ? <img src={logo} alt="" /> : <h1>The Sport Leagues</h1>}
         </div>
     );
 };

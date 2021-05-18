@@ -1,0 +1,9 @@
+.Leagues{
+    background-color: teal;
+    text-align: center;
+}
+.singleLeagues{
+    width: 95%;
+    flex-wrap: wrap;
+    margin-left: 10%;
+}
