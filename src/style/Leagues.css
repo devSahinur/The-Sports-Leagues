@@ -1,6 +1,8 @@
 .Leagues{
-    background-color: teal;
+    background-color: #0E0A2A;
     text-align: center;
+    /* height: 100vh; */
+    width: 100%;
 }
 .singleLeagues{
     width: 95%;

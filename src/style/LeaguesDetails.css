@@ -1,5 +1,19 @@
+.LeaguesDetails{
+    background-color: #0E0A2A;
+}
 .bg{
     background-color: #3A42FF;
-    border-radius: 5px;
+    border-radius: 10px;
+    color: white;
+}
+.cocial-icon{
+    text-align: center;
+}
+.cocial-icon a{
+    justify-content: space-between;
+    padding: 10px;
+    font-size: 40px;
+}
+.description p{
     color: white;
 }
