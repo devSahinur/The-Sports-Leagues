@@ -8,12 +8,16 @@ import SyncLoader from "react-spinners/ClipLoader";
 
 const Leagues = () => {
     const [leaguesData, setLeaguesData] =useState([])
+    const [loading, setLoading] = useState(true);
     // console.log(leaguesData)
 
     useEffect(() =>{
         fetch('https://www.thesportsdb.com/api/v1/json/1/search_all_leagues.php?c=England')
         .then(res=> res.json())
-        .then(data => setLeaguesData(data.countrys))
+        .then(data => {
+            setLeaguesData(data.countrys)
+            setLoading(false);
+        })
     },[])
 
     return (
@@ -21,10 +25,11 @@ const Leagues = () => {
             <Header/>
             
             <div className=" d-flex singleLeagues ">
-                    {
-                        leaguesData.map( leagues => <SingleLeagues key={leagues.idLeague} leagues={leagues}/>)
+            
+                    { loading  ? <div className="loadingSpiner"><SyncLoader  color='#fff'  loading size={150} /></div>
+                                :leaguesData.map( leagues => <SingleLeagues key={leagues.idLeague} leagues={leagues}/>)
                     }
-                    <SyncLoader  color='#fff'  loading size={150} />
+                    
             </div>
         </div>
     );
